@@ -1,23 +1,24 @@
 .Home {
     text-align: center;
-  }
-  
-  .Head {
+}
+
+.Head {
     text-align: right;
     width: 500px;
-    font-family: 'Roboto';
+    font-family: "Roboto";
     font-size: 48px;
     font-style: normal;
     font-weight: 700;
-    line-height: 56px; /* 116.667% */
+    line-height: 56px;
+    /* 116.667% */
     letter-spacing: 2.4px;
     position: absolute;
     top: 250px;
     right: 180px;
     color: rgb(50, 50, 50);
-  }
-  
-  .HeadPara{
+}
+
+.HeadPara {
     font-family: Roboto;
     text-align: right;
     width: 500px;
@@ -28,12 +29,13 @@
     font-size: 13px;
     font-style: normal;
     font-weight: 300;
-    line-height: 25px; /* 192.308% */
+    line-height: 25px;
+    /* 192.308% */
     letter-spacing: 0.65px;
     color: rgb(100, 100, 100);
-  }
-  
-  .getBldBtn{
+}
+
+.getBldBtn {
     display: inline-block;
     background-color: black;
     font-size: 30px;
@@ -47,79 +49,259 @@
     height: 75px;
     border-radius: 15px;
     box-shadow: 0px 4px 90px 5px #DEDFDF;
-  }
-  
-  .MissHead{
+}
+
+.MissHead {
     position: relative;
     font-size: 36px;
     font-weight: 700;
     top: 130px;
     left: 150px;
-  }
-  
-  .MissPara{
+}
+
+.MissPara {
     font-size: 18px;
     font-weight: 300;
     line-height: normal;
     letter-spacing: 0.9px;
     padding: 150px;
-  }
-  
-  .Collab{
+}
+
+.Collab {
     position: relative;
     left: 150px;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-  }
-  
-  .CollabDivCont{
+}
+
+.CollabDivCont {
     text-align: center;
-    width: 100%;
-    display: flex;                  
-    flex-direction: row;            
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;            
-  }
-  .CollabDiv{
-    height:200px;
+    justify-content: space-around;
+}
+
+.CollabDiv {
+    height: 200px;
     width: 200px;
     margin: 20px;
-    background-color: #b8b8b8;
+    background-color: #ffffff;
     font-family: 'Roboto';
-    font-weight: 800;
-    font-size: 30px;
-    color: rgb(98, 98, 98);
-    transition: 0.5s; 
-  }
-  
-  .CollabDiv p{
-    margin-top: 80px;
-  }
-  
-  .CollabDiv:hover{
-    height:250px;
-    width: 250px;
+    border-radius: 10px;
+    color: #B6B5B5;
+    font-size: 48px;
+    font-weight: 700;
+
+    transition: 0.5s;
+}
+
+.CollabDiv p {
+    font-family: 'Roboto';
+    margin-top: 70px;
+}
+
+.CollabDiv:hover {
+    /* height:250px;
+    width: 250px; */
+    color: #909090;
     background-color: white;
-    
-    box-shadow:
-    5px 5px 10px #b3b3b3, 
-    -5px -5px 10px #b3b3b3;
-  }
-  
-  .HTGB{
+    border-radius: 10px;
+    box-shadow: 0px 4px 100px 2px rgba(100, 100, 100, 0.25);
+}
+
+.HTGB {
     margin-top: 200px;
     margin-left: 150px;
     font-size: 36px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-  }
-  
-  .step{
-    color: #000000;
-    width: 100px;
-    height: 100px;
+}
+
+
+.Steps {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 250px;
+    justify-content: space-around;
+}
+
+.Step {
+    width: 150px;
+    height: 150px;
+    background-color: #ffffff;
+    border: 6px solid black;
     border-radius: 50%;
-  }
+    margin: 3%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.Step h1 {
+    padding-top: 8px;
+    font-size: 50px;
+}
+
+.Steptext{
+    width: 40%;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+}
+
+#step2 {
+    margin-left: 60%;
+}
+
+#steptext2{
+    margin-left: 50%;
+}
+
+.imgContainer {
+    width: 100%;
+    text-align: center;
+}
+
+/* FOOTER */
+
+.foot {
+    height: 800px;
+    width: 100%;
+    color: white;
+    background-color: #1E2833;
+}
+
+#footfrstdiv {
+    margin-left: 200px;
+    margin-right: 200px;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo {
+    width: 30px;
+}
+
+.foot div span {
+    font-size: 30px;
+}
+
+.foot div span button {
+    margin-left: 50px;
+    background-color: transparent;
+    width: 175px;
+    height: 50px;
+    border-radius: 8px;
+    border: 0px solid #FFF;
+    background: #FFF;
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.232px;
+}
+
+#line {
+    margin: 80px 200px;
+    width: 80%;
+    height: 1px;
+    opacity: 0.1;
+    background: #FFF;
+}
+
+#footscnddiv {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+#subscribe {
+    width: 25%;
+    font-size: 30px;
+}
+
+#emailinput {
+    width: 230px;
+    height: 40px;
+    font-size: 16px;
+    background-color: transparent;
+    border: #1E2833;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#emailbtnimg {
+    position: relative;
+    top: 17px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+#services {
+    width: 20%;
+
+}
+
+#services ul {
+    list-style: none;
+    line-height: 60px;
+}
+
+#services ul li:first-child {
+    color: #FFD2DD;
+}
+
+#about {
+    width: 20%;
+}
+
+#about ul {
+    list-style: none;
+    line-height: 60px;
+}
+
+#about ul li:first-child {
+    color: #FFD2DD;
+}
+
+#help {
+    width: 20%;
+}
+
+#help ul {
+    list-style: none;
+    line-height: 60px;
+}
+
+#help ul li:first-child {
+    color: #FFD2DD;
+}
+
+#footthrddiv {
+    margin: 40px 200px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footthrddiv span {
+    justify-content: space-between;
+}
+
+#footthrddiv span a {
+    text-decoration: none;
+    color: #FFF;
+    font-size: 20px;
+    padding-inline: 20px;
+}
