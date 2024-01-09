@@ -134,6 +134,7 @@ function Home() {
           </div>
           <div id='help'>
             <ul>
+              <li>Help</li>
               <li>FAQs</li>
               <li>Contact Us</li>
             </ul>
