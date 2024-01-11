@@ -135,6 +135,7 @@ const FindBlood = () => {
                 onChange={(e) => setDistrict(e.target.value)}
               />
             </Form.Group>
+      
             <br></br>
             <Button variant="primary" onClick={handleSubmit} >
               Proceed
