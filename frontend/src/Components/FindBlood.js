@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css'
-import Navbar from '../components/Navbar';
+import Navbar from '../Components/Navbar';
 
 const FindBlood = () => {
   const [bloodGroup, setBloodGroup] = useState('');

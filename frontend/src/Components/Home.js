@@ -4,6 +4,8 @@ import heartimage from './Assets/heart.png';
 import logo from './Assets/Logo.svg';
 import submit from './Assets/Submit_btn.svg'
 import social from './Assets/Social_Icons.svg'
+import './Navbar.css'
+import Navbar from '../Components/Navbar';
 
 // const EmailRegistrationForm = () => {
 //   const [email, setEmail] = useState('');
@@ -20,6 +22,8 @@ import social from './Assets/Social_Icons.svg'
 
 function Home() {
   return (
+    <div>
+      <Navbar/>
     <div className="home">
       <svg xmlns="http://www.w3.org/2000/svg" width="946" height="968" viewBox="0 0 946 968" fill="none">
         <g filter="url(#filter0_d_93_102)">
@@ -155,7 +159,7 @@ function Home() {
         © 2021 SaveLifeDonateBlood. All rights reserved | Design
       </footer>
     </div>
-
+    </div>
   );
 }
 
