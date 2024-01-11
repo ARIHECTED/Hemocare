@@ -6,7 +6,7 @@ div.reg {
 form {
     max-width: 80%;
     margin: auto;
-    background-color: rgb(252, 225, 225);
+    background-color: rgba(252, 225, 225, 0.292);
     padding: 30px;
 }
 
