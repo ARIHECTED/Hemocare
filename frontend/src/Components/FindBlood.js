@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Container, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Navbar.css'
 import Navbar from '../Components/Navbar';
@@ -49,7 +49,7 @@ const FindBlood = () => {
   
 
   return (
-    <Container>
+    <div>
       <Navbar/>
       <Row className="justify-content-md-center mt-5">
         <Col md={6}>
@@ -143,7 +143,7 @@ const FindBlood = () => {
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

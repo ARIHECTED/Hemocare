@@ -1,8 +1,11 @@
 import React from "react";
 import "./Regstyle.css"; 
+import Navbar from '../Components/Navbar';
 
 export default function Register() {
   return (
+    <div>
+      <Navbar/>
     <div className="reg" id="register">
         <div className="rad row mb-3"> Register as Donor </div>
       <form>
@@ -136,10 +139,12 @@ export default function Register() {
       </div>
     </div>
   </div>
+  
   <button type="submit" className="btn btn-primary">
     Sumbit
   </button>
       </form>
+    </div>
     </div>
   );
 }
