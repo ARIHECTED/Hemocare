@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import Logo from './Assets/Logo1.svg'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Navbar.css'
 
@@ -11,11 +12,11 @@ function Navbar() {
     
   
     return (
-      <>
+      <div className='Nav'>
         <nav className='navbar'>
           <div className='navbar-container'>
             <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              HemoCare
+              <img src={Logo} alt='Hemo'></img>
               {/* <i class='fab fa-typo3' /> */}
             </Link>
             <div className='menu-icon' onClick={handleClick}>
@@ -35,10 +36,16 @@ function Navbar() {
               <li className='nav-item'>
                 <Link to='/Register' className='nav-links' onClick={closeMobileMenu}> Register Now  </Link>
               </li>
+              <li className='nav-item'>
+                <Link to='/Register' className='nav-links' onClick={closeMobileMenu}> Sign Up  </Link>
+              </li>
+              <li className='nav-item'>
+                <Link to='/Dashboard' className='nav-links' onClick={closeMobileMenu}> Dashboard  </Link>
+              </li>
             </ul>
           </div>
         </nav>
-      </>
+      </div>
     );
   }
   

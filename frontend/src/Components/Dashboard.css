@@ -1,0 +1,185 @@
+.MainContainer {
+    width: 90%;
+    height: 800px;
+    margin: 150px 100px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #F9F9F9;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+#Left {
+    width: 65%;
+}
+
+#NameTag {
+    border-radius: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    height: 250px;
+    padding: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 100px 3px rgba(163, 163, 163, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#Profile {
+    display: flex;
+    align-items: center;
+}
+
+#Name {
+    color: #000;
+    font-family: Roboto;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+#EditProfile {
+    display: flex;
+    align-items: center;
+}
+
+/* #EditProfile img{
+    transition: 200ms;
+}
+
+#EditProfile img:hover{
+    transform: rotate(-30deg);
+} */
+
+@keyframes pendulum {
+    0% {
+        transform: rotate(30deg);
+    }
+
+    50% {
+        transform: rotate(-30deg);
+    }
+
+    100% {
+        transform: rotate(30deg);
+    }
+}
+
+#EditProfile img:hover {
+    animation: pendulum 1s infinite;
+    transform-origin: 50% 0;
+}
+
+#editBtn {
+    width: 169px;
+    height: 39px;
+    margin: 20px;
+    color: #000000;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 900;
+    border-radius: 10px;
+    background: #ffffff;
+    transition: 500ms;
+}
+
+#editBtn:hover {
+    box-shadow: 0px 4px 60px 5px #8f8f8f;
+    color: #ffffff;
+    background: #000000;
+}
+
+#Bio {
+    border-radius: 20px;
+    width: 100%;
+    height: 450px;
+    padding: 20px;
+    text-align: center;
+    background: #FFF;
+    box-shadow: 0px 4px 100px 3px rgba(163, 163, 163, 0.25);
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.table {
+    width: 60%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+td:first-child {
+    text-align: right;
+    padding-right: 50px;
+}
+
+td:last-child {
+    text-align: left;
+    padding-left: 50px;
+}
+
+
+#Right {
+    width: 25%;
+}
+
+#BackendData {
+    width: 100%;
+    height: 350px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    background: #FFF;
+    color: #000;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 100;
+    box-shadow: 0px 4px 100px 2px rgba(164, 162, 162, 0.25);
+}
+
+.table2 {
+    width: 80%;
+    margin: 40px auto;
+    border-collapse: collapse;
+}
+
+tr:first-child th {
+    opacity: 0.5;
+    font-weight: 100;
+    text-align: center;
+    padding: 10px;
+    border-bottom: none;
+}
+
+#Calendar {
+    width: 100%;
+    height: 350px;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background: #FFF;
+    box-shadow: 0px 4px 100px 2px rgba(164, 162, 162, 0.25);
+}
+
+.custom-calendar {
+    font-family: 'Roboto';
+    border: 1px solid #ccc;
+    border-radius: 80px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.custom-calendar .react-calendar__tile--active {
+    background-color: #3f73ab;
+    color: white;
+}
+
+.custom-calendar .react-calendar__tile--hover {
+    background-color: #e0e0e0;
+}
