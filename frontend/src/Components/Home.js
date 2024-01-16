@@ -6,6 +6,7 @@ import submit from './Assets/Submit_btn.svg'
 import social from './Assets/Social_Icons.svg'
 import './Navbar.css'
 import Navbar from '../Components/Navbar';
+import ContactUs from '../Components/ContactUs';
 import { Link } from 'react-router-dom';
 
 // const EmailRegistrationForm = () => {
@@ -145,7 +146,8 @@ function Home() {
               <ul>
                 <li>Help</li>
                 <li>FAQs</li>
-                <li>Contact Us</li>
+                <Link to='/contact-us'>
+                <li>Contact Us</li></Link>
               </ul>
             </div>
           </div>

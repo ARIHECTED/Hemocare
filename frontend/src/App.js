@@ -7,6 +7,7 @@ import Dashboard from './Components/Dashboard';
 import EditProfile from './Components/EditProfile';
 import AboutUs from './Components/AboutUs';
 import SignIn from './Components/SignIn';
+import ContactUs from './Components/ContactUs';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 
@@ -26,6 +27,7 @@ function App() {
           <Route path='/Dashboard' element={<Dashboard/>}/>
           <Route path='/EditProfile' element={<EditProfile/>}/>
           <Route path='/SignIn' element={<SignIn/>}/>
+          <Route path='/contact-us' element={<ContactUs/>} />
         </Routes>
       </div>
     </Router>
