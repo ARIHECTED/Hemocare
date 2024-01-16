@@ -37,7 +37,7 @@ function Navbar() {
                 <Link to='/Register' className='nav-links' onClick={closeMobileMenu}> Register Now  </Link>
               </li>
               <li className='nav-item'>
-                <Link to='/Register' className='nav-links' onClick={closeMobileMenu}> Sign Up  </Link>
+                <Link to='/SignIn' className='nav-links' onClick={closeMobileMenu}> Sign Up  </Link>
               </li>
               <li className='nav-item'>
                 <Link to='/Dashboard' className='nav-links' onClick={closeMobileMenu}> Dashboard  </Link>

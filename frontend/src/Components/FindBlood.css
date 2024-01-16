@@ -1,19 +1,41 @@
-.Container{
-    width: 80%;
-    height: fit-content;
+#Container {
+    width: 90%;
+    height: 800px;
+    margin: 150px 100px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #F9F9F9;
+    text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-#design{
-    width: 50%;
-    height: 100%;
+#design {
+    /* width: 50%;
+    height: 100%; */
+    width: 510px;
+    height: 834px;
     border-radius: 10px;
     background: conic-gradient(from 180deg at 50% 50%, #550832 42.74986267089844deg, #B32346 112.12486624717712deg, #5E0933 160.87486267089844deg, #991747 209.6248698234558deg, #B32346 248.9998698234558deg, #500732 295.87486267089844deg, #A8174E 337.12485551834106deg);
     box-shadow: 0px 4px 90px 2px rgba(209, 205, 205, 0.25);
 }
 
-#recipient{
-    width: 50%;
+#recipient {
+    width: 60%;
     height: 100%;
+}
+
+#recipient h1 {
+    color: #000;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#recipient button{
+    width: 335px;
+    height: 73px;
+    border-radius: 15px;
+    background: #000;
+    box-shadow: 0px 4px 90px 5px #DEDFDF;
 }

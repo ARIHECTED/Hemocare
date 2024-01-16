@@ -1,5 +1,6 @@
 import React from "react";
 import "./SignIn.css";
+import { Link } from "react-router-dom";
 import { FaClipboardUser, FaUnlock } from "react-icons/fa6";
 
 const SignIn = () => {
@@ -9,29 +10,34 @@ const SignIn = () => {
         <form action="">
           <h1>Sign In</h1>
           <div className="input-box">
-            <input type="text" placeholder="Username" required />
+            <input type="text" placeholder="Email" required />
             <FaClipboardUser className="icon" />
           </div>
           <div className="input-box">
             <input type="password" placeholder="Password" required />
             <FaUnlock className="icon" />
           </div>
-          <div className="remember-forget">
+          {/* <div className="remember-forget">
             <label>
               <input type="checkbox" />
               Remember me
             </label>
             <a href="#">Forget Password?</a>
-          </div>
+          </div> */}
           <button type="submit">Sign in</button>
 
           <div className="register-link">
             <p>
               Don't have account? Register Here
               <br />
-              <a href="#">Donar</a> ||
+              <Link to='/Register'>
+              <a href="#">Donor </a>
+              </Link>
+               ||
               {/* <a href="#"> Hospitals</a> || */}
-              <a href="#"> Organisation</a>
+              <Link to='/RegisterOrganization'>
+              <a href="#"> Organization</a>
+              </Link>
             </p>
           </div>
         </form>
