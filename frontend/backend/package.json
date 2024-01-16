@@ -1,0 +1,17 @@
+{
+  "name": "hemocare",
+  "version": "1.0.0",
+  "description": "blood donation app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kawaljeet kaur",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongodb": "^6.3.0",
+    "mongoose": "^8.1.0"
+  }
+}
