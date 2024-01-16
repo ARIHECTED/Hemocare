@@ -6,6 +6,7 @@ import RegisterOrganization from './Components/RegisterOrganization';
 import Dashboard from './Components/Dashboard';
 import EditProfile from './Components/EditProfile';
 import AboutUs from './Components/AboutUs';
+import SignIn from './Components/SignIn';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 
@@ -24,6 +25,7 @@ function App() {
           <Route path='/RegisterOrganization' element={<RegisterOrganization/>}/>
           <Route path='/Dashboard' element={<Dashboard/>}/>
           <Route path='/EditProfile' element={<EditProfile/>}/>
+          <Route path='/SignIn' element={<SignIn/>}/>
         </Routes>
       </div>
     </Router>

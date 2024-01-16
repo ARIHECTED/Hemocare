@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-// import Calendar from 'react-calendar';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import './Dashboard.css';
@@ -102,8 +103,7 @@ const Dashboard = () => {
                 </div>
 
                 <div id='Calendar'>
-                    <h1>Calendar</h1>
-                    {/* <Calendar onChange={setDate} value={date} /> */}
+                    <Calendar onChange={setDate} value={date} />
                 </div>
             </div>
         </div>

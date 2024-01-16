@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import './FindBlood.css';
+import './Navbar.css'
+>>>>>>> 99377d4e63cb840730d2735217ce1fe22839fea7
 import Navbar from '../Components/Navbar';
 import './FindBlood.css';
 
@@ -22,7 +27,7 @@ const FindBlood = () => {
 
   const handleSubmit = async () => {
     const data = { bloodGroup, state, district };
-    
+
     if (!bloodGroup || !state || !district) {
       console.error('Please fill in all required fields.');
       return;
@@ -35,7 +40,7 @@ const FindBlood = () => {
         },
         body: JSON.stringify(data),
       });
-  
+
       if (response.ok) {
         console.log('Recipient details submitted successfully.');
         navigate("/Home");
@@ -46,103 +51,112 @@ const FindBlood = () => {
       console.error('Error submitting recipient details:', error);
     }
   };
-  
+
 
   return (
     <div>
-      <Navbar/>
-      <Row className="justify-content-md-center mt-5">
-        <Col md={6}>
-          <Form>
-          <Form.Group controlId="bloodGroup">
-  <Form.Label>Blood Group</Form.Label>
-  <Form.Select
-    value={bloodGroup}
-    onChange={(e) => setBloodGroup(e.target.value)}
-  >
-    <option value="" disabled>Select blood group</option>
-    <option value="A+">A+</option>
-    <option value="A-">A-</option>
-    <option value="B+">B+</option>
-    <option value="B-">B-</option>
-    <option value="AB+">AB+</option>
-    <option value="AB-">AB-</option>
-    <option value="O+">O+</option>
-    <option value="O-">O-</option>
-  </Form.Select>
-</Form.Group>
-<br></br><br></br>
-            <Form.Group controlId="location">
-              <Form.Label>Location</Form.Label><br></br>
-              <Button variant="primary" onClick={getCurrentLocation}>
-                Use Current Location
-              </Button>
-            </Form.Group>
+      <Navbar />
+      <div id='Container'>
+        <div id='design'>hello</div>
+
+        <div id='recipient'>
+          <h1>Recipient Details</h1>
+          <Row className="justify-content-md-center mt-5">
+            <Col md={6}>
+              <Form>
+                <Form.Group controlId="bloodGroup">
+                  <Form.Label>Blood Group</Form.Label>
+                  <Form.Select
+                    value={bloodGroup}
+                    onChange={(e) => setBloodGroup(e.target.value)}
+                  >
+                    <option value="" disabled>Select blood group</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </Form.Select>
+                </Form.Group>
+                <br></br><br></br>
+                <Form.Group controlId="location">
+                  <Form.Label>Location</Form.Label><br></br>
+                  <Button variant="primary" onClick={getCurrentLocation}>
+                    Use Current Location
+                  </Button>
+                </Form.Group>
 
 
-            <br></br> <p align="center">OR</p><br></br>
+                <br></br> <p align="center">OR</p><br></br>
 
-            <Form.Group controlId="state">
-  <Form.Label>State</Form.Label>
-  <Form.Select
-    value={state}
-    onChange={(e) => setState(e.target.value)}
-  >
-    <option value="" disabled>Select state</option>
-    <option value="Andhra Pradesh">Andhra Pradesh</option>
-    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-    <option value="Assam">Assam</option>
-    <option value="Bihar">Bihar</option>
-    <option value="Chhattisgarh">Chhattisgarh</option>
-    <option value="Goa">Goa</option>
-    <option value="Gujarat">Gujarat</option>
-    <option value="Haryana">Haryana</option>
-    <option value="Himachal Pradesh">Himachal Pradesh</option>
-    <option value="Jharkhand">Jharkhand</option>
-    <option value="Karnataka">Karnataka</option>
-    <option value="Kerala">Kerala</option>
-    <option value="Madhya Pradesh">Madhya Pradesh</option>
-    <option value="Maharashtra">Maharashtra</option>
-    <option value="Manipur">Manipur</option>
-    <option value="Meghalaya">Meghalaya</option>
-    <option value="Mizoram">Mizoram</option>
-    <option value="Nagaland">Nagaland</option>
-    <option value="Odisha">Odisha</option>
-    <option value="Punjab">Punjab</option>
-    <option value="Rajasthan">Rajasthan</option>
-    <option value="Sikkim">Sikkim</option>
-    <option value="Tamil Nadu">Tamil Nadu</option>
-    <option value="Telangana">Telangana</option>
-    <option value="Tripura">Tripura</option>
-    <option value="Uttar Pradesh">Uttar Pradesh</option>
-    <option value="Uttarakhand">Uttarakhand</option>
-    <option value="West Bengal">West Bengal</option>
-    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-    <option value="Chandigarh">Chandigarh</option>
-    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
-    <option value="Delhi">Delhi</option>
-    <option value="Lakshadweep">Lakshadweep</option>
-    <option value="Puducherry">Puducherry</option>
-  </Form.Select>
-</Form.Group><br></br>
+                <Form.Group controlId="state">
+                  <Form.Label>State</Form.Label>
+                  <Form.Select
+                    value={state}
+                    onChange={(e) => setState(e.target.value)}
+                  >
+                    <option value="" disabled>Select state</option>
+                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                    <option value="Jharkhand">Jharkhand</option>
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Kerala">Kerala</option>
+                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                    <option value="Maharashtra">Maharashtra</option>
+                    <option value="Manipur">Manipur</option>
+                    <option value="Meghalaya">Meghalaya</option>
+                    <option value="Mizoram">Mizoram</option>
+                    <option value="Nagaland">Nagaland</option>
+                    <option value="Odisha">Odisha</option>
+                    <option value="Punjab">Punjab</option>
+                    <option value="Rajasthan">Rajasthan</option>
+                    <option value="Sikkim">Sikkim</option>
+                    <option value="Tamil Nadu">Tamil Nadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Tripura">Tripura</option>
+                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                    <option value="Uttarakhand">Uttarakhand</option>
+                    <option value="West Bengal">West Bengal</option>
+                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                    <option value="Chandigarh">Chandigarh</option>
+                    <option value="Dadra and Nagar Haveli and Daman and Diu">Dadra and Nagar Haveli and Daman and Diu</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Lakshadweep">Lakshadweep</option>
+                    <option value="Puducherry">Puducherry</option>
+                  </Form.Select>
+                </Form.Group><br></br>
 
-            <Form.Group controlId="district">
-              <Form.Label>District</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="Enter district"
-                value={district}
-                onChange={(e) => setDistrict(e.target.value)}
-              />
-            </Form.Group>
-      
-            <br></br>
-            <Button variant="primary" onClick={handleSubmit} >
-              Proceed
-            </Button>
-          </Form>
-        </Col>
-      </Row>
+                <Form.Group controlId="district">
+                  <Form.Label>District</Form.Label>
+                  <Form.Select
+                    // type="text"
+                    // placeholder="Enter district"
+                    value={district}
+                    onChange={(e) => setDistrict(e.target.value)}
+                  >
+                    <option value="" disabled>Select district</option>
+                    </Form.Select>
+                </Form.Group>
+
+                <br></br>
+                <Button variant="primary" onClick={handleSubmit} >
+                  Proceed
+                </Button>
+              </Form>
+            </Col>
+          </Row>
+        </div>
+      </div>
     </div>
   );
 };
