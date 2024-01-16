@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import './FindBlood.css';
 import './Navbar.css'
->>>>>>> 99377d4e63cb840730d2735217ce1fe22839fea7
 import Navbar from '../Components/Navbar';
 import './FindBlood.css';
 
