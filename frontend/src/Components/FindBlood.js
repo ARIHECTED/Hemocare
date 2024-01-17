@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './FindBlood.css';
 import './Navbar.css'
 import Navbar from '../Components/Navbar';
+import './FindBlood.css';
 
 const FindBlood = () => {
   const [bloodGroup, setBloodGroup] = useState('');
@@ -53,7 +54,7 @@ const FindBlood = () => {
     <div>
       <Navbar />
       <div id='Container'>
-        <div id='design'>hello</div>
+        <div id='design'></div>
 
         <div id='recipient'>
           <h1>Recipient Details</h1>
@@ -132,7 +133,7 @@ const FindBlood = () => {
                   </Form.Select>
                 </Form.Group><br></br>
 
-                <Form.Group controlId="district">
+                {/* <Form.Group controlId="district">
                   <Form.Label>District</Form.Label>
                   <Form.Select
                     // type="text"
@@ -142,7 +143,7 @@ const FindBlood = () => {
                   >
                     <option value="" disabled>Select district</option>
                     </Form.Select>
-                </Form.Group>
+                </Form.Group> */}
 
                 <br></br>
                 <Button variant="primary" onClick={handleSubmit} >

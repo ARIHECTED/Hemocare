@@ -20,6 +20,9 @@ export default function Register() {
           <label for="email">Email</label>
           <input type="email" id="email" name="Email" required /><br /><br />
 
+          <label for="password">Password</label>
+          <input type="text" id="password" name="Password" required /><br /><br />
+
           <label for="add">Address</label>
           <input type="text" id="address" name="Address" required /><br /><br />
 
