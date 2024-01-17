@@ -1,90 +1,104 @@
-import React from 'react'
-import './ContactUs.css'; 
-const Contact = () =>{
-    return (
-        <>
-        <div className='contact_info'>
-            <div className = "container-fluid">
-                <div className = "row">
-                    <div className = "col-lg-10 offset-lg-1 d-flex justify-content-between">
+import React from "react";
+import './ContactUs.css';
+import { useState } from "react";
 
-                        <div className='contact_info_item d-flex justify-content-start align-items-center'>
-                            <div className = "contact_info_content">
-                                <div className = "contact_info_title">
-                                    Phone
-                                </div>
-                                <div className = "contact_info_text">
-                                    +91 1111 543 2198
-                                </div>
-                            </div>
-                        </div>
+const ContactUsForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
 
-                        <div className='contact_info_item d-flex justify-content-start align-items-center'>
-                            <div className = "contact_info_content">
-                                <div className = "contact_info_title">
-                                    Email
-                                </div>
-                                <div className = "contact_info_text">
-                                    hemocare108@gmail.com
-                                </div>
-                            </div>
-                        </div>
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-                        <div className='contact_info_item d-flex justify-content-start align-items-center'>
-                            <div className = "contact_info_content">
-                                <div className = "contact_info_title">
-                                    Address
-                                </div>
-                                <div className = "contact_info_text">
-                                    Baddi,HP,India
-                                </div>
-                            </div>
-                        </div>
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Handle form submission logic here
+    console.log("Form submitted:", formData);
+    // You can add your logic to send the form data to the server or perform other actions
+  };
 
-                    </div>
-
-                </div>
-
-            </div>
+  return (
+    <div className="maindiv">
+    <div className="container mt-5">
+      <div className="row">
+        <div className="col-md-4">
+          <h4>Phone</h4>
+          <p>123-456-7890</p>
         </div>
-        {/*contact us form */}
-
-        <div className='contact_form'>
-            <div className='container'>
-                <div className='row'>
-                    <div className="col-lg-10 offset-ls-1">
-                        <div className = "contact_form_container">
-                            <div className='contact_form_title'>
-                                Get in Touch
-                            </div>
-                            <form id = "contact_form">
-                                <div className='contact_form_name'>
-                                    <input type="text" id= "contact_form_name" className='contact_form_name input_field' 
-                                    placeholder = "Your name" required = "true"/>
-
-                                    <input type="email" id= "contact_form_email" className='contact_form_email input_field' 
-                                    placeholder = "Your email" required = "true"/>
-
-                                    <label>Phone Number</label>
-                                    <input type="number" id= "contact_form_phone" className='contact_form_phone input_field' 
-                                    placeholder = "Your number" required = "true"/>
-                                </div>
-
-                                <div className='contact_form_text mt-5'>
-                                     <textarea className='text_field contact_form_message' placeholder = "Your Message Here..." cols="30" rows="10"></textarea>
-                                </div>
-
-                                <div className='contact_from_button'>
-                                    <button type="submit" className='button contact_submit_button'>Send Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div className="col-md-4">
+          <h4>Email</h4>
+          <p>hemocare108@blood.com</p>
         </div>
-        </>
-    )
-}
+        <div className="col-md-4">
+          <h4>Address</h4>
+          <p>Baddi, HP, India</p>
+        </div>
+      </div>
 
-export default Contact
+      <div className="row mt-5">
+        <div className="col-md-8 offset-md-2">
+          <form onSubmit={handleSubmit}>
+            <h3 className="text-center">Get In Touch</h3>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                style={{ width: "100%" }}  
+                placeholder="Your Name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="email"
+                className="form-control"
+                style={{ width: "100%" }} 
+                placeholder="Your Email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <input
+                type="tel"
+                className="form-control"
+                style={{ width: "100%", marginBottom:"20px" }}  
+                placeholder="Your Phone Number"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+              />
+            </div>
+            <div className="form-group">
+              <textarea
+                className="textArea form-control" 
+                rows="5"
+                placeholder="Your Message Here..."
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                style={{ width: "100%", marginBottom:"20px"}}
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-primary">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    </div>
+  );
+};
+export default ContactUsForm;
