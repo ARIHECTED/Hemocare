@@ -25,7 +25,7 @@ function AboutUs(){
 
                 <div className="row">
 
-                    <div className="about-col">
+                    <div className="about-col" id="our-story">
                         <div className="image">
                             <img src={drop} alt="" />
                         </div>
@@ -36,7 +36,7 @@ function AboutUs(){
                     </div>
 
 
-                    <div className="about-col">
+                    <div className="about-col" id="benefits">
                         <div className="image">
                             <img src={innovation} alt=""/>
                         </div>
@@ -48,7 +48,7 @@ function AboutUs(){
                     </div>
 
 
-                    <div className="about-col">
+                    <div className="about-col" id="team">
                         <div className="image">
                             <img src={netwotk} alt=""/>
                         </div>
@@ -59,7 +59,7 @@ function AboutUs(){
                     </div>
                     
 
-                    <div className="about-col">
+                    <div className="about-col" id="careers">
                         <div className="image">
                             <img src={save} alt=""/>
                         </div>

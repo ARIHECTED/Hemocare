@@ -23,6 +23,14 @@ import { Link } from 'react-router-dom';
 //   };
 
 function Home() {
+
+  const scrollToElement = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
   return (
     <div>
       <Navbar />
@@ -131,10 +139,10 @@ function Home() {
             <div id='about'>
               <ul>
                 <li>About</li>
-                <li>Our Story</li>
-                <li>Benefits</li>
-                <li>Team</li>
-                <li>Careers</li>
+                <li><Link to="/AboutUs#our-story" onClick={() => scrollToElement('our-story')}>Our Story</Link></li>
+                <li><Link to="/AboutUs#benefits" onClick={() => scrollToElement('benefits')}>Benefits</Link></li>
+                <li><Link to="/AboutUs#team" onClick={() => scrollToElement('team')}>Team</Link></li>
+                <li><Link to="/AboutUs#careers" onClick={() => scrollToElement('careers')}>Careers</Link></li>
               </ul>
             </div>
             <div id='help'>
