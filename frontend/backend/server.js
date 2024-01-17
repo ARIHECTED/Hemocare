@@ -7,6 +7,10 @@ const app = express(); // rest objects - storing express variable to use them fu
 dotenv.config({ path:'./.env' });
 require('./db/conn');
 const PORT = process.env.PORT;
+
+app.use(express.json());
+// we link the router files to make our route easy
+app.use(require('./router/auth'));
 // Connect to databas
 // Middleware
 const middleware = (req, res, next) => {
@@ -14,31 +18,37 @@ const middleware = (req, res, next) => {
   next();
 };
 
+// hospital schema
+const User = require('./model/hospitalSchema');
+// donor schema
+const User1 = require('./model/donarSchema');
+
+
 // routes
 // 1 test route
-app.get("/", (req, res) => {
-  res.send({
-    message: "Welcome Hemocare",
-  }); // there are different status code and 200 - mean okay
-});
+// app.get("/", (req, res) => {
+//   res.send({
+//     message: "Welcome Hemocare",
+//   }); // there are different status code and 200 - mean okay
+// });
 // sample - http://localhost:3000
-app.get("/aboutus", middleware, (req, res) => {
-  res.send({
-    message: "aboutus",
-  }); // there are different status code and 200 - mean okay
-});
-// sample - http://localhost:3000/aboutus
-app.get("/findblood", middleware, (req, res) => {
-  res.send({
-    message: "findblood",
-  }); // there are different status code and 200 - mean okay
-});
-// sample - http://localhost:3000/findblood
-app.get("/signin", (req, res) => {
-  res.send({
-    message: "signin",
-  }); // there are different status code and 200 - mean okay
-});
+// app.get("/aboutus", middleware, (req, res) => {
+//   res.send({
+//     message: "aboutus",
+//   }); // there are different status code and 200 - mean okay
+// });
+// // sample - http://localhost:3000/aboutus
+// app.get("/findblood", middleware, (req, res) => {
+//   res.send({
+//     message: "findblood",
+//   }); // there are different status code and 200 - mean okay
+// });
+// // sample - http://localhost:3000/findblood
+// app.get("/signin", (req, res) => {
+//   res.send({
+//     message: "signin",
+//   }); // there are different status code and 200 - mean okay
+// });
 // sample - http://localhost:300/signin
 
 // const PORT = 3000;
