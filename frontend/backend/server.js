@@ -1,20 +1,13 @@
+const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const express = require("express");
 const app = express(); // rest objects - storing express variable to use them further, // use to access all the properties of express
 
-const DB = 'mongodb+srv://admin:hemocare@hemocare.dbjwdoe.mongodb.net/Hemocare?retryWrites=true&w=majority';
-// Connect to database
-mongoose.connect(DB, {
-    useNewUrlParser: true,
-    // useCreateIndex: true,
-    useUnifiedTopology: true,
-    // useFindAndModify: false,
-  })
-  .then(() => {
-    console.log(`Database Connected`);
-  })
-  .catch((err) => console.log(`no connection ${err}`));
-
+// const DB = 'mongodb+srv://admin:hemocare@hemocare.dbjwdoe.mongodb.net/Hemocare?retryWrites=true&w=majority';
+dotenv.config({ path:'./.env' });
+require('./db/conn');
+const PORT = process.env.PORT;
+// Connect to databas
 // Middleware
 const middleware = (req, res, next) => {
   console.log(`Hello Middleware`);
@@ -48,7 +41,7 @@ app.get("/signin", (req, res) => {
 });
 // sample - http://localhost:300/signin
 
-const PORT = 3000;
+// const PORT = 3000;
 
 // listen - to run our application
 app.listen(PORT, () => {
