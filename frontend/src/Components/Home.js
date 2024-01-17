@@ -75,7 +75,7 @@ function Home() {
           <div className='CollabDiv' id='d3'><p>YMCA</p></div>
         </div>
         <h3 className='HTGB'>
-          How the process works?
+          How does the process work?
         </h3>
         <div className='Steps'>
           <div className='Step' id='step1'>

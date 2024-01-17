@@ -4,7 +4,7 @@ import Navbar from '../Components/Navbar';
 import drop from './Assets/drop.png';
 import innovation from './Assets/innovation.png'
 import netwotk from './Assets/netwotk.png'
-import noti from './Assets/noti.png'
+// import noti from './Assets/noti.png'
 import cost from './Assets/cost.png'
 import save from './Assets/save.png'
 
@@ -17,63 +17,83 @@ function AboutUs(){
             <div className='bg'>
         <section id="about-us">
             <div className="about">
-                <h1 className="heading">What is it all about ?</h1> <br></br>
-                <p className="head-des" >We solve the problem of blood emergencies by connecting <span
-                        className="one-line"><br></br></span> blood donors directly with people in blood need. </p>
+                <h1 className="heading">What are we all about ?</h1> <br></br>
+                {/* <p className="head-des" >We solve the problem of blood emergencies by connecting <span
+                        className="one-line"><br></br></span> blood donors directly with people in blood need. </p> */}
                         <br></br>
+
+
                 <div className="row">
+
                     <div className="about-col">
                         <div className="image">
                             <img src={drop} alt="" />
                         </div>
-                        <h3>What do we do ?</h3>
-                        <p>We connect blood donors with recipients, without any intermediary such as blood banks, for an
-                            efficient and seamless process.</p>
+                        <div className='text'>
+                            <h3>Our Story</h3>
+                            <p>At Hemocare, our journey began with a shared commitment to make a positive impact on the community. Fueled by the passion for saving lives through blood donation, our story unfolds with every heartbeat that receives the gift of life. Learn more about the roots of Hemocare and how our mission has evolved over time.</p>
+                        </div>
                     </div>
+
+
                     <div className="about-col">
                         <div className="image">
                             <img src={innovation} alt=""/>
                         </div>
                         <br></br>
-                        <h3>Innovative</h3>
-                        <p>Blood Buddy is an innovative approach to address global health.We provide <span>immediate
-                                access</span> to blood donors.</p>
+                        <div className='text'>
+                            <h3>Benefits</h3>
+                            <p>Discover the myriad benefits of joining the Hemocare community. From fostering a culture of compassion to creating a network of blood donors and recipients, Hemocare brings together individuals with a shared purpose. Explore the advantages of being part of a movement that goes beyond personal contributions to make a collective difference.</p>
+                        </div>
                     </div>
+
+
                     <div className="about-col">
                         <div className="image">
                             <img src={netwotk} alt=""/>
                         </div>
-                        <h3>Network</h3>
-                        <p>Blood Buddy is one of several community organizations working together as a network that
-                            responds to emergencies in an efficient manner.</p>
+                        <div className='text'>
+                            <h3>Team</h3>
+                            <p> Get to know the heartbeat of Hemocare – our team members. Each individual brings a wealth of experience, expertise, and enthusiasm to our mission. From the founders to every member, our team is committed to creating a positive impact in the world of blood donation. Meet the faces shaping the future of Hemocare.</p>
+                        </div>
                     </div>
                     
-                    <div className="about-col">
-                        <div className="image">
-                            <img src={noti} alt=""/>
-                        </div>
-                        <h3>Get notified</h3>
-                        <p>Blood Buddy Connect works with network partners to connect blood donors and recipients
-                            through an automated SMS service and a mobile app.</p>
-                    </div>
-                    <div className="about-col">
-                        <div className="image">
-                            <img src={cost} alt=""/>
-                        </div>
-                        <h3>Totally Free</h3>
-                        <p>Blood Budyy's ultimate goal is to provide an easy -to-use, easy-to-access, fast, efficient,
-                            and reliable way to get life-saving blood, totally <span>Free of cost.</span></p>
-                    </div>
+
                     <div className="about-col">
                         <div className="image">
                             <img src={save} alt=""/>
                         </div>
-                        <h3>Save Life</h3>
-                        <p>We are a non profit foundation and our main objective is to make sure that everything is done
-                            to protect vulnerable persons.<span>Help
-                                us by making a gift!</span></p>
+                        <div className='text'>
+                            <h3>Careers</h3>
+                            <p>Are you passionate about making a difference? Explore career opportunities at Hemocare and become part of a dynamic team dedicated to saving lives. As we continue to grow, we are on the lookout for individuals who share our vision and values. Discover the fulfilling career paths awaiting you at Hemocare.</p>
+                        </div>
                     </div>
-                </div><br></br><br></br>
+
+
+                    {/* <div className="about-col">
+                        <div className="image">
+                            <img src={noti} alt=""/>
+                        </div>
+                        <div className='text'>
+                            <h3>Get notified</h3>
+                            <p>Hemocare works with network partners to connect blood donors and recipients
+                            through an automated SMS service.</p>
+                        </div>
+                    </div> */}
+
+
+                    <div className="about-col">
+                        <div className="image">
+                            <img src={cost} alt=""/>
+                        </div>
+                        <div className='text'>
+                            <h3>Free of Cost</h3>
+                            <p>At Hemocare, we believe in the power of altruism without financial barriers. Our commitment to saving lives is reflected in our policy of providing blood donation services completely free of cost. We understand the importance of accessibility and aim to ensure that the gift of life remains a selfless act, available to everyone regardless of economic status. Learn more about how Hemocare operates on the principle that compassion knows no price tag.</p>
+                        </div>
+                    </div>
+
+
+                </div>
             </div>
         </section>
     </div>
