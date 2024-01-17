@@ -51,9 +51,8 @@ function Home() {
           Save Life Donate Blood
         </h1>
         <p className='HeadPara'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Blood donation is a selfless act that directly saves lives, offering a lifeline to patients facing surgeries, trauma, and medical conditions. By contributing a small amount of time and blood, donors become a hero in someone's life.Each donation can make a significant impact, emphasizing the profound connection between individual generosity and the preservation of life.
+        
         </p>
         <Link to='/FindBlood'>
         <button className='getBldBtn'>
@@ -64,9 +63,8 @@ function Home() {
           Our Mission
         </h2>
         <p className='MissPara'>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
+          Our mission is to create a seamless and compassionate platform that connects blood donors with organizations in need, fostering a strong community dedicated to saving lives. Our goal is to streamline the blood donation process, ensuring efficient and timely matches while promoting transparency and trust. Through technological innovation and community engagement, we aim to increase blood donation participation, raise awareness about the importance of blood donation, and ultimately make a significant, positive impact on the well-being of individuals and communities. HemoCare strives to be a lifesaving bridge, bringing together those who can give with those who urgently require this life-sustaining resource.
+        
         </p>
         <h3 className='Collab'>
           Our Collaborators
@@ -77,28 +75,25 @@ function Home() {
           <div className='CollabDiv' id='d3'><p>YMCA</p></div>
         </div>
         <h3 className='HTGB'>
-          How to get blood?
+          How the process works?
         </h3>
         <div className='Steps'>
           <div className='Step' id='step1'>
             <h1>1</h1>
           </div>
           <div className='Steptext'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Begin by registering as a donor or an organization on the HemoCare platform, providing necessary details and preferences.
+          
           </div>
           <div className='Step' id='step2'><h1>2</h1></div>
           <div className='Steptext' id='steptext2'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            HemoCare employs a sophisticated matching algorithm that analyzes donor profiles and specific blood requests, ensuring accurate and efficient matches based on various criteria.
+          
           </div>
           <div className='Step' id='step3'><h1>3</h1></div>
           <div className='Steptext'>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            The donor and organization can then coordinate and schedule a convenient appointment for the blood donation process, facilitated through the HemoCare platform.
+          
           </div>
         </div>
         <div className='imgContainer'>
