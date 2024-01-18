@@ -2,14 +2,11 @@ import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './FindBlood.css';
-import './Navbar.css'
 import Navbar from '../Components/Navbar';
-import './FindBlood.css';
 
 const FindBlood = () => {
   const [bloodGroup, setBloodGroup] = useState('');
   const [state, setState] = useState('');
-  const [district, setDistrict] = useState('');
   const navigate = useNavigate();
 
   const getCurrentLocation = () => {
@@ -23,14 +20,14 @@ const FindBlood = () => {
   };
 
   const handleSubmit = async () => {
-    const data = { bloodGroup, state, district };
+    const data = { bloodGroup, state };
 
-    if (!bloodGroup || !state || !district) {
+    if (!bloodGroup || !state) {
       console.error('Please fill in all required fields.');
       return;
     }
     try {
-      const response = await fetch('http://localhost:5000/api/recipient', {
+      const response = await fetch('http://localhost:3000/api/recipient', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -87,7 +84,7 @@ const FindBlood = () => {
                 </Form.Group>
 
 
-                <br></br> <p align="center">OR</p><br></br>
+                <br></br> <br></br>
 
                 <Form.Group controlId="state">
                   <Form.Label>State</Form.Label>
@@ -133,17 +130,7 @@ const FindBlood = () => {
                   </Form.Select>
                 </Form.Group><br></br>
 
-                {/* <Form.Group controlId="district">
-                  <Form.Label>District</Form.Label>
-                  <Form.Select
-                    // type="text"
-                    // placeholder="Enter district"
-                    value={district}
-                    onChange={(e) => setDistrict(e.target.value)}
-                  >
-                    <option value="" disabled>Select district</option>
-                    </Form.Select>
-                </Form.Group> */}
+
 
                 <br></br>
                 <Button variant="primary" onClick={handleSubmit} >

@@ -24,12 +24,14 @@ import { Link } from 'react-router-dom';
 
 function Home() {
 
-  const scrollToElement = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
+  // const scrollToElement = (id) => {
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // }
+
+
   
   return (
     <div>
@@ -86,22 +88,28 @@ function Home() {
           How does the process work?
         </h3>
         <div className='Steps'>
+
+          <div id="slide-in-from-left">
           <div className='Step' id='step1'>
             <h1>1</h1>
           </div>
           <div className='Steptext'>
             Begin by registering as a donor or an organization on the HemoCare platform, providing necessary details and preferences.
-          
           </div>
+          </div>
+
+          <div id="slide-in-from-right">
           <div className='Step' id='step2'><h1>2</h1></div>
           <div className='Steptext' id='steptext2'>
             HemoCare employs a sophisticated matching algorithm that analyzes donor profiles and specific blood requests, ensuring accurate and efficient matches based on various criteria.
-          
           </div>
+          </div>
+
+          <div id="slide-in-from-left">
           <div className='Step' id='step3'><h1>3</h1></div>
           <div className='Steptext'>
             The donor and organization can then coordinate and schedule a convenient appointment for the blood donation process, facilitated through the HemoCare platform.
-          
+          </div>
           </div>
         </div>
         <div className='imgContainer'>
@@ -139,10 +147,10 @@ function Home() {
             <div id='about'>
               <ul>
                 <li>About</li>
-                <li><Link to="/AboutUs#our-story" onClick={() => scrollToElement('our-story')}>Our Story</Link></li>
-                <li><Link to="/AboutUs#benefits" onClick={() => scrollToElement('benefits')}>Benefits</Link></li>
-                <li><Link to="/AboutUs#team" onClick={() => scrollToElement('team')}>Team</Link></li>
-                <li><Link to="/AboutUs#careers" onClick={() => scrollToElement('careers')}>Careers</Link></li>
+                <li><Link to="/AboutUs#our-story">Our Story</Link></li>
+                <li><Link to="/AboutUs">Benefits</Link></li>
+                <li><Link to="/AboutUs">Team</Link></li>
+                <li><Link to="/AboutUs">Careers</Link></li>
               </ul>
             </div>
             <div id='help'>
