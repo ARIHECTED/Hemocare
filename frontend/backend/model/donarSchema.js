@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const donorSchema =  new mongoose.Schema({
     fullName:{
         type : String,
@@ -33,4 +34,4 @@ const donorSchema =  new mongoose.Schema({
         required: true
     }
 });
-module.exports = mongoose.model("donor", donorSchema);
+module.exports = mongoose.model('donor', donorSchema);

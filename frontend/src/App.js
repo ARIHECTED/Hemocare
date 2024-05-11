@@ -8,6 +8,7 @@ import EditProfile from './Components/EditProfile';
 import AboutUs from './Components/AboutUs';
 import SignIn from './Components/SignIn';
 import ContactUs from './Components/ContactUs';
+import { Error } from './Components/Error';
 import { BrowserRouter as Router, Route, Routes} from "react-router-dom";
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path='/EditProfile' element={<EditProfile/>}/>
           <Route path='/SignIn' element={<SignIn/>}/>
           <Route path='/contact-us' element={<ContactUs/>} />
+          <Route path='*' element={<Error/>} />
         </Routes>
       </div>
     </Router>

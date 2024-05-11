@@ -1,5 +1,12 @@
 // controllers.js
+const bcrypt = require('bcryptjs');
+// import { Request, Response } from 'express';
+// import jwt = require('jsonwebtoken');
+// import UserModel from './../models/UserModel';
+// const userModel = new UserModel();
+
 // Controller for the Home Page
+
 const getHomePage = (req, res) => {
     res.send('Welcome to the Blood Donation Home Page');
   };
@@ -14,7 +21,7 @@ const getHomePage = (req, res) => {
     res.send('Find Blood Donors and Hospitals near you');
   };
   
-  // Controller for the Register Page
+  // Controller for the donor Register Page
   const getRegisterPage = (req, res) => {
     res.send('Register as a Blood Donor');
   };
@@ -44,25 +51,95 @@ const getHomePage = (req, res) => {
     res.send('Contact Us for any inquiries');
   };
 
-//   post controller
-  const postRegister = (req, res) => {
-    console.log(req.body);
-    res.json({message: req.body});
-    res.send('Handling user registration (POST request)');
+//   post controller for donor
+const donor = require('../model/donarSchema');
+  const postRegister = async(req, res) => {
+    try{
+      const{ fullName, Email, Password, Address, Phone, Age, bloodGroup, LastDonation } = req.body;
+      console.log(fullName, Email, Password, Address, Phone, Age, bloodGroup, LastDonation);
+      const exiuser = await donor.findOne({ Email });
+      if(exiuser){
+        let response = res.status(400).json({message:'Donor already exist'});
+        // return res.status(400).json({message:'Donor already exist'});
+        if(res.status === 400 && response.message === 'Donor already exist'){
+          alert("User already exist");
+        }
+      }
+      // Hash the password
+      const hashedPassword2 = await bcrypt.hash(Password, 10);
+      // new user instance
+      const newUser = new donor({
+        fullName,
+        Email,
+        Password: hashedPassword2,
+        Address,
+        Phone,
+        Age,
+        bloodGroup,
+        LastDonation,
+      });
+      await newUser.save();
+      return  res.status(201).json({message: 'Donor Register Successfully'});
+    }catch(error){
+      console.error('Error during user registration:', error);
+      return res.status(500).json({ message: 'Internal server error' });
+    }
   };
   
+  const hospital = require('../model/hospitalSchema');
+  const postRegisterOrganization = async(req, res) => {
+    try {
+      const { hospital_name, Email, Password, Address, Phone } = req.body;
+      console.log(hospital_name, Email, Password, Address, Phone);
   
-  const postRegisterOrganization = (req, res) => {
-    console.log(req.body);
-    res.json({message: req.body});
-    res.send('Handling organization registration (POST request)');
+      // Check if the email is already registered
+      const existingUser = await hospital.findOne({ Email });
+      if (existingUser) {
+        return res.status(400).json({ message: 'Email already registered' });
+      }
+  
+      // Hash the password
+      const hashedPassword = await bcrypt.hash(Password, 10);
+  
+      // Create a new user instance
+      const newUser = new hospital({
+        hospital_name,
+        Email,
+        Password: hashedPassword,
+        Address,
+        Phone,
+      });
+  
+      // Save the user to the database
+      await newUser.save();
+  
+      return res.status(201).json({ message: 'Organization registered successfully' });
+    } catch (error) {
+      console.error('Error during organization registration:', error);
+      return res.status(500).json({ message: 'Internal server error' });
+    }
   };
   
-
-  const postSignIn = (req, res) => {
-    console.log(req.body);
-    res.json({message: req.body});
-    res.send('Handling user sign-in (POST request)');
+  const SignIn = require('../model/signInSchema')
+  const postSignIn = async (req, res) => {
+    try {
+      const {Email, Password } = req.body;
+      const user = await SignIn.findOne({ Email }); 
+      // if user not found
+      if (!user) {
+        return res.status(401).json({ message: 'Authentication failed' });
+      }
+      // compare password with hashed password
+      const validPassword = await bcrypt.compare(Password, user.Password);
+      if(validPassword){
+          return res.json({ message: "Sign-in Successfully", user });
+      }else{
+          return res.status(401).json({ message: 'Invalid Password!' })
+      }
+    } catch (error) {
+      console.error('Error during sign-in:', error);
+      return res.status(500).json({message:'Internal-server error'});
+    }
   };
   
  

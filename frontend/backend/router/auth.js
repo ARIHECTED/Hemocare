@@ -31,7 +31,8 @@ router.get('/contact-us', getContactUsPage);
 
 // post request
 router.post('/Register', postRegister);
-router.post('/RegisterOrganization', postRegisterOrganization);
+router.post('/RegisterOrganization', 
+postRegisterOrganization);
 router.post('/SignIn', postSignIn);
 router.post('/EditProfile', postEditProfile);
 
