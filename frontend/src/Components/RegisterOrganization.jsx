@@ -7,7 +7,7 @@ import Navbar from "./Navbar";
 
 export default function Register() {
   const [Ruser, RsetUser] = useState({
-    fullName: "",
+    hospital_name: "",
     Email: "",
     Password: "",
     Address: "",
@@ -51,7 +51,7 @@ export default function Register() {
       <div className='Form'>
         <form onSubmit={handleSubmit}>
           <label htmlFor="fname">Organization Name</label>
-          <input type="text" id="fname" name="fullName" value={Ruser.fullName} onChange={handleInput} required /><br /><br />
+          <input type="text" id="fname" name="hospital_name" value={Ruser.hospital_name} onChange={handleInput} required /><br /><br />
 
           <label htmlFor="email">Email</label>
           <input type="email" id="email" name="Email" value={Ruser.Email} onChange={handleInput} required /><br /><br />

@@ -55,15 +55,15 @@ const getHomePage = (req, res) => {
 const donor = require('../model/donarSchema');
   const postRegister = async(req, res) => {
     try{
-      const{ fullName, Email, Password, Address, Phone, Age, bloodGroup, LastDonation } = req.body;
-      console.log(fullName, Email, Password, Address, Phone, Age, bloodGroup, LastDonation);
+      const{ fullName, Email, Password, Address, Phone, Age, bloodGroup, LastDonation, disease } = req.body;
+      console.log(fullName, Email, Password, Address, Phone, Age, bloodGroup, LastDonation, disease);
       const exiuser = await donor.findOne({ Email });
       if(exiuser){
-        let response = res.status(400).json({message:'Donor already exist'});
-        // return res.status(400).json({message:'Donor already exist'});
-        if(res.status === 400 && response.message === 'Donor already exist'){
-          alert("User already exist");
-        }
+        // let response = res.status(400).json({message:'Donor already exist'});
+        return res.status(400).json({message:'Donor already exist'});
+        // if(res.status === 400 && response.message === 'Donor already exist'){
+        //   alert("User already exist");
+        // }
       }
       // Hash the password
       const hashedPassword2 = await bcrypt.hash(Password, 10);
@@ -77,6 +77,7 @@ const donor = require('../model/donarSchema');
         Age,
         bloodGroup,
         LastDonation,
+        disease,
       });
       await newUser.save();
       return  res.status(201).json({message: 'Donor Register Successfully'});

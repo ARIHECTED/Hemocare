@@ -1,7 +1,9 @@
 const express = require('express');
 const router = express.Router();
-
-const {
+const donorSchema = require("../validators/auth-validator");
+const hospitalSchema = require("../validators/auth-validator2");
+const validate = require("../middlewares/validate-middleware");
+const{
   getHomePage,
   getAboutUsPage,
   getFindBloodPage,
@@ -16,6 +18,7 @@ const {
   postSignIn,
   postEditProfile
 } = require('./controller'); // Import your controllers
+// const hospitalSchema = require('../model/hospitalSchema');
 
 // Define routes
 router.get('/', getHomePage);
@@ -30,9 +33,8 @@ router.get('/SignIn', getSignInPage);
 router.get('/contact-us', getContactUsPage);
 
 // post request
-router.post('/Register', postRegister);
-router.post('/RegisterOrganization', 
-postRegisterOrganization);
+router.post('/Register', validate(donorSchema), postRegister);
+router.post('/RegisterOrganization', validate(hospitalSchema), postRegisterOrganization);
 router.post('/SignIn', postSignIn);
 router.post('/EditProfile', postEditProfile);
 
