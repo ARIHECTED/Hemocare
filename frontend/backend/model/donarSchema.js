@@ -14,7 +14,7 @@ const donorSchema =  new mongoose.Schema({
         type : String,
         required: true
     },
-    Address:{
+    State:{
         type : String,
         required: true
     },

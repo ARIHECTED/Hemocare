@@ -1,10 +1,12 @@
 import React, {useState} from "react";
 import "./SignIn.css";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
+import { useNavigate } from 'react-router-dom';
 import { FaClipboardUser, FaUnlock } from "react-icons/fa6";
-import axios from 'axios';
+// import axios from 'axios';
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     Email: "",
     Password: "",
@@ -20,9 +22,35 @@ const SignIn = () => {
   });
  };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async(e) => {
     e.preventDefault();
-    console.log(user);
+    // console.log(user);
+    try {
+      const response = await fetch(`http://localhost:3001/SignIn`, {
+        method:"POST",
+        headers:{
+          'Content-Type':'application/json',
+        },
+        body:JSON.stringify(user),
+      });
+      console.log(response);
+      if (response.ok) {
+        console.log('Recipient details submitted successfully.');
+        navigate("/Home");
+      } else {
+        console.error('Error submitting recipient details:', response.statusText);
+      }
+      // const response = await axios.post(`http://localhost:3001/SignIn`, user);
+      // console.log(response);
+      // if(response.status === 200) {
+      //   history.push("/");
+      // }
+      // else{
+      //   console.log("sign-in fail");
+      // }
+    } catch (error) {
+      console.log("SignIn", error)
+    }
   };
   return (
     <div className="upper">

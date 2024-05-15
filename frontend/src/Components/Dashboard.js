@@ -95,9 +95,9 @@ const Dashboard = () => {
                         <tr>
                             <td>15 Jun 2023</td><td>100</td>
                         </tr>
-                        <tr>
+                        {/* <tr>
                             <td>20 Dec 2023</td><td>90</td>
-                       </tr>
+                       </tr> */}
                     </table>
 
                 </div>

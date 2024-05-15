@@ -70,6 +70,7 @@
   .nav-links:hover {
     border-bottom: 4px solid #3f0101;
     transition: all 0.2s ease-out;
+    /* border: none; */
   }
   
   .fa-bars {

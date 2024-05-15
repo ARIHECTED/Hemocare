@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./RegisterDonor.css";
 import { Link } from "react-router-dom";
-
+import { useNavigate } from 'react-router-dom';
 import Navbar from "./Navbar";
 
 
 export default function Register() {
+  const navigate = useNavigate();
   const [Ruser, RsetUser] = useState({
     hospital_name: "",
     Email: "",
@@ -37,6 +38,12 @@ export default function Register() {
         body:JSON.stringify(Ruser),
       });
       console.log(response);
+      if (response.ok) {
+        console.log('Recipient details submitted successfully.');
+        navigate("/Home");
+      } else {
+        console.error('Error submitting recipient details:', response.statusText);
+      }
     } catch (error) {
       console.log("OrganisationRegister", error);
     }

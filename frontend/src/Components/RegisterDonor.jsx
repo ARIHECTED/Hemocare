@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 // import "./Regstyle.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 import "./RegisterDonor.css";
 import Navbar from "./Navbar";
 
 export default function Register() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     fullName: "",
     Email: "",
     Password: "",
-    Address: "",
+    State: "",
     Phone: "",
     Age: "",
     BloodGroup: "",
@@ -39,6 +41,12 @@ export default function Register() {
         body: JSON.stringify(user),
       });
       console.log(response);
+      if (response.ok) {
+        console.log('Recipient details submitted successfully.');
+        navigate("/Home");
+      } else {
+        console.error('Error submitting recipient details:', response.statusText);
+      }
     } catch (error) {
       console.log("Donor Registration", error);
     }
@@ -85,12 +93,12 @@ export default function Register() {
           <br />
           <br />
 
-          <label htmlFor="address">Address</label>
+          <label htmlFor="address">State</label>
           <input
             type="text"
             id="address"
-            name="Address"
-            value={user.Address}
+            name="State"
+            value={user.State}
             onChange={handleInput}
             required
           />

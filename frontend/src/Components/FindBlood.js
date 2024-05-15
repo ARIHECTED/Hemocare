@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './FindBlood.css';
-import Navbar from '../Components/Navbar';
+import Navbar from './Navbar';
 
 const FindBlood = () => {
   const [bloodGroup, setBloodGroup] = useState('');
-  const [state, setState] = useState('');
+  const [State, setState] = useState('');
+  // const [ UnitBlood, setUnitBlood] = useState('');
   const navigate = useNavigate();
 
   const getCurrentLocation = () => {
@@ -20,9 +21,9 @@ const FindBlood = () => {
   };
 
   const handleSubmit = async () => {
-    const data = { bloodGroup, state };
+    const data = { bloodGroup, State };
 
-    if (!bloodGroup || !state) {
+    if (!bloodGroup || !State ) {
       console.error('Please fill in all required fields.');
       return;
     }
@@ -37,7 +38,7 @@ const FindBlood = () => {
 
       if (response.ok) {
         console.log('Recipient details submitted successfully.');
-        navigate("/Home");
+        navigate("/DonorList");
       } else {
         console.error('Error submitting recipient details:', response.statusText);
       }
@@ -82,14 +83,23 @@ const FindBlood = () => {
                     Use Current Location
                   </Button>
                 </Form.Group>
+                {/* <Form.Group controlId="UnitBlood">
+                  <Form.Label>Unit Blood</Form.Label>
+                  <Form.Control
+                    type="text"
+                    value={UnitBlood}
+                    onChange={(e) => setUnitBlood(e.target.value)}
+                  />
+                </Form.Group> */}
+
 
 
                 <br></br> <br></br>
 
-                <Form.Group controlId="state">
+                <Form.Group controlId="State">
                   <Form.Label>State</Form.Label>
                   <Form.Select
-                    value={state}
+                    value={State}
                     onChange={(e) => setState(e.target.value)}
                   >
                     <option value="" disabled>Select state</option>

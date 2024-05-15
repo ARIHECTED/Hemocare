@@ -18,11 +18,11 @@ const donorSchema = z.object({
     .trim()
     .min(7, { message: "Password must be atleast of 7 character." })
     .max(1024, { message: "Password must not be more than 1024 characters" }),
-  Address: z
-    .string({ required_error: "Address is required" })
+  State: z
+    .string({ required_error: "State is required" })
     .trim()
-    .min(3, { message: "Address must be atleast of 3 character." })
-    .max(255, { message: "Address must not be more than 255 characters" }),
+    .min(1, { message: "State must be atleast of 1 character." })
+    .max(255, { message: "State must not be more than 255 characters" }),
   Phone: z
     .string({ required_error: "Phone number is required" })
     .trim()
