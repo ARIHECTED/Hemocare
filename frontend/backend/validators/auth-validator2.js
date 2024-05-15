@@ -23,7 +23,7 @@ const hospitalSchema = z.object({
   Address: z
     .string({ required_error: "Address is required" })
     .trim()
-    .min(7, { message: "Address must be atleast of 7 characters" })
+    .min(1, { message: "Address must be atleast of 7 characters" })
     .max(255, { message: "Address must not be more than 255 characters" }),
   Phone: z
     .string({ required_error: "Phone number is required" })

@@ -40,14 +40,6 @@ const SignIn = () => {
       } else {
         console.error('Error submitting recipient details:', response.statusText);
       }
-      // const response = await axios.post(`http://localhost:3001/SignIn`, user);
-      // console.log(response);
-      // if(response.status === 200) {
-      //   history.push("/");
-      // }
-      // else{
-      //   console.log("sign-in fail");
-      // }
     } catch (error) {
       console.log("SignIn", error)
     }

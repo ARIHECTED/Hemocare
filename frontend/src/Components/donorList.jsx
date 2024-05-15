@@ -13,10 +13,10 @@ const DonorList = () => {
     // Fetch donors based on bloodGroup and state
     fetchDonors(bloodGroup, state);
   }, [location.search]);
-
+// 
   const fetchDonors = async (bloodGroup, state) => {
     try {
-      const response = await fetch(`http://localhost:3000/api/donors?bloodGroup=${bloodGroup}&state=${state}t`);
+      const response = await fetch(``);
       if (response.ok) {
         const data = await response.json();
         setDonors(data);
